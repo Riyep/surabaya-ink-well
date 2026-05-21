@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment | Surabaya Ink Well</title>
+    <link rel="icon" type="image/png" href="logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #fff;
+            --white-70: rgba(255, 255, 255, 0.7);
+            --white-45: rgba(255, 255, 255, 0.45);
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: var(--font-body);
+            color: var(--white);
+            background: #080808 url("images/app-page-bg.png") center / cover fixed no-repeat;
+        }
+
+        .appointment-page {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        .appointment-page::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            pointer-events: none;
+        }
+
+        .appointment-choice {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            padding: 70px;
+            display: flex;
+            align-items: flex-end;
+            transition: background 0.35s ease;
+        }
+
+        .appointment-choice:hover {
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .appointment-choice.left {
+            border-right: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .choice-content {
+            max-width: 520px;
+        }
+
+        .choice-label {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: var(--white-70);
+            margin-bottom: 18px;
+        }
+
+        .choice-title {
+            font-family: var(--font-heading);
+            font-size: clamp(46px, 7vw, 92px);
+            font-weight: 300;
+            letter-spacing: 6px;
+            line-height: 0.95;
+            margin-bottom: 24px;
+
+            min-height: 260px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .choice-line {
+            width: 120px;
+            height: 1px;
+            background: var(--white-45);
+            margin-bottom: 28px;
+        }
+
+        .choice-text {
+            font-size: 19px;
+            line-height: 1.7;
+            color: var(--white-70);
+            margin-bottom: 30px;
+        }
+
+        .choice-price {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .choice-note {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: var(--white-70);
+            text-transform: uppercase;
+            margin-bottom: 34px;
+        }
+
+        .choice-btn {
+            display: inline-block;
+            padding: 15px 42px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .choice-btn:hover {
+            background: var(--white);
+            color: #111;
+            border-color: var(--white);
+        }
+
+        .back-home {
+            position: fixed;
+            top: 28px;
+            left: 32px;
+            z-index: 5;
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 3px;
+            opacity: 0.8;
+        }
+
+        .back-home:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 820px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            .appointment-page {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-choice {
+                min-height: 50vh;
+                padding: 90px 28px 45px;
+            }
+
+            .appointment-choice.left {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+            }
+
+            .choice-title {
+                letter-spacing: 4px;
+                min-height: auto;
+            }
+
+            .choice-text {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-home">BACK HOME</a>
+
+    <main class="appointment-page">
+        <section class="appointment-choice left">
+            <div class="choice-content">
+                <p class="choice-label">OPTION 01</p>
+                <h1 class="choice-title">BOOK AND TATTOO AT OUR PLACE</h1>
+                <div class="choice-line"></div>
+                <p class="choice-text">
+                    Come to our studio, meet the artist, discuss your idea, and start your tattoo session in our space.
+                </p>
+                <p class="choice-price">RP. 50.000</p>
+                <p class="choice-note">Booking price only. Not the full tattoo price.</p>
+                <a href="payment.html?service=studio&price=50000" class="choice-btn">CHOOSE THIS</a>
+            </div>
+        </section>
+
+        <section class="appointment-choice right">
+            <div class="choice-content">
+                <p class="choice-label">OPTION 02</p>
+                <h1 class="choice-title">CALL ARTIST TO YOUR PLACE</h1>
+                <div class="choice-line"></div>
+                <p class="choice-text">
+                    Our artist comes to your location for a more private tattoo experience at your place.
+                </p>
+                <p class="choice-price">RP. 100.000</p>
+                <p class="choice-note">Booking price only. Not the full tattoo price.</p>
+                <a href="payment.html?service=home&price=100000" class="choice-btn">CHOOSE THIS</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

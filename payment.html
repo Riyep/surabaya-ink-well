@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Surabaya Ink Well</title>
+    <link rel="icon" type="image/png" href="logo/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #fff;
+            --white-70: rgba(255, 255, 255, .7);
+            --white-45: rgba(255, 255, 255, .45);
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: var(--font-body);
+            color: var(--white);
+            background: #080808 url("images/payment-bg.png") center / cover fixed no-repeat;
+        }
+
+        .payment-page {
+            min-height: 100vh;
+            padding: 90px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .payment-page::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .58);
+        }
+
+        .payment-card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 760px;
+            background: rgba(0, 0, 0, .58);
+            border: 1px solid rgba(255, 255, 255, .16);
+            padding: 42px;
+        }
+
+        .payment-kicker {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: var(--white-70);
+            margin-bottom: 16px;
+        }
+
+        .payment-title {
+            font-family: var(--font-heading);
+            font-size: clamp(42px, 7vw, 78px);
+            font-weight: 300;
+            letter-spacing: 6px;
+            line-height: 1;
+            margin-bottom: 22px;
+        }
+
+        .payment-line {
+            width: 120px;
+            height: 1px;
+            background: var(--white-45);
+            margin-bottom: 30px;
+        }
+
+        .payment-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+
+        .summary-box {
+            border: 1px solid rgba(255, 255, 255, .14);
+            padding: 18px;
+            background: rgba(255, 255, 255, .06);
+        }
+
+        .summary-box span {
+            display: block;
+            font-size: 13px;
+            color: var(--white-70);
+            margin-bottom: 8px;
+        }
+
+        .summary-box strong {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .payment-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 15px 18px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 15px;
+            outline: none;
+        }
+
+        .payment-form input:focus {
+            border-color: rgba(255, 255, 255, .7);
+        }
+
+        .age-note {
+            color: var(--white-70);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .form-error {
+            display: none;
+            color: #ffb3b3;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .pay-btn {
+            margin-top: 10px;
+            padding: 16px 28px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            background: var(--white);
+            color: #111;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            letter-spacing: 3px;
+            transition: all .3s ease;
+        }
+
+        .pay-btn:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-4px);
+        }
+
+        .qr-box {
+            display: none;
+            margin-top: 34px;
+            padding: 28px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, .16);
+            background: rgba(255, 255, 255, .06);
+        }
+
+        .qr-box.active {
+            display: block;
+        }
+
+        .qr-box img {
+            width: min(260px, 100%);
+            background: #fff;
+            padding: 12px;
+            margin-bottom: 18px;
+        }
+
+        .qr-box h2 {
+            font-family: var(--font-heading);
+            letter-spacing: 3px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .qr-box p {
+            color: var(--white-70);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 28px;
+            left: 32px;
+            z-index: 5;
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 3px;
+            opacity: .8;
+        }
+
+        @media (max-width: 620px) {
+            .payment-card {
+                padding: 30px 22px;
+            }
+
+            .payment-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="appointment.html" class="back-link">BACK</a>
+
+    <main class="payment-page">
+        <section class="payment-card">
+            <p class="payment-kicker">BOOKING PAYMENT</p>
+            <h1 class="payment-title">CONFIRM YOUR SESSION</h1>
+            <div class="payment-line"></div>
+            <p class="age-note">
+                Booking price only. Not the full tattoo price.
+            </p>
+            <div class="payment-summary">
+                <div class="summary-box">
+                    <span>Selected Service</span>
+                    <strong id="serviceName">-</strong>
+                </div>
+
+                <div class="summary-box">
+                    <span>Booking Price</span>
+                    <strong id="servicePrice">-</strong>
+                </div>
+
+            </div>
+
+            <form class="payment-form" id="paymentForm">
+                <p class="age-note">
+                    Name
+                </p>
+                <input type="text" id="customerName" required>
+                <p class="age-note">
+                    Date of Birth
+                </p>
+                <input type="date" id="customerDob" required>
+
+                <p class="age-note">
+                    We do not accept customers under 21 years old.
+                </p>
+                <p class="age-note">
+                    WhatApp Number
+                </p>
+                <input type="tel" id="customerWhatsapp" required>
+                <p class="age-note">
+                    Appointment Date
+                </p>
+                <input type="datetime-local" id="appointmentDateTime" required>
+
+                <p class="form-error" id="formError"></p>
+
+                <button type="submit" class="pay-btn">
+                    GENERATE PAYMENT QR
+                </button>
+            </form>
+
+            <div class="qr-box" id="qrBox">
+                <img id="paymentQr" src="" alt="Payment QR Code">
+                <h2>SCAN TO PAY</h2>
+                <p>
+                    This QR code is for booking payment only. It is not the full tattoo price.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get("service");
+
+        const services = {
+            studio: {
+                name: "Book and tattoo at our place",
+                price: 50000
+            },
+            home: {
+                name: "Call artist to your place",
+                price: 100000
+            }
+        };
+
+        const selectedService = services[service] || services.studio;
+
+        document.getElementById("serviceName").textContent = selectedService.name;
+        document.getElementById("servicePrice").textContent =
+            "RP. " + selectedService.price.toLocaleString("id-ID");
+
+        function getAge(dateString) {
+            const today = new Date();
+            const birthDate = new Date(dateString);
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+
+            if (
+                monthDiff < 0 ||
+                (monthDiff === 0 && today.getDate() < birthDate.getDate())
+            ) {
+                age--;
+            }
+
+            return age;
+        }
+
+        function generatePaymentQr(data) {
+            /*
+                Replace this with your real payment gateway QR generator.
+
+                Example:
+                return "https://your-payment-gateway.com/qr?amount=" + data.price;
+
+                For now, this creates a demo QR from the payment data.
+            */
+
+            const qrText =
+                "Surabaya Ink Well Booking\n" +
+                "Name: " + data.name + "\n" +
+                "Service: " + data.serviceName + "\n" +
+                "Price: Rp " + data.price + "\n" +
+                "Appointment: " + data.appointmentDateTime;
+
+            return "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
+                encodeURIComponent(qrText);
+        }
+
+        document.getElementById("paymentForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("customerName").value.trim();
+            const dob = document.getElementById("customerDob").value;
+            const whatsapp = document.getElementById("customerWhatsapp").value.trim();
+            const appointmentDateTime = document.getElementById("appointmentDateTime").value;
+            const error = document.getElementById("formError");
+
+            error.style.display = "none";
+            error.textContent = "";
+
+            if (getAge(dob) < 21) {
+                error.textContent = "Sorry, we do not accept customers under 21 years old.";
+                error.style.display = "block";
+                return;
+            }
+
+            const paymentData = {
+                name: name,
+                dateOfBirth: dob,
+                whatsapp: whatsapp,
+                appointmentDateTime: appointmentDateTime,
+                serviceName: selectedService.name,
+                price: selectedService.price
+            };
+
+            const qrUrl = generatePaymentQr(paymentData);
+
+            document.getElementById("paymentQr").src = qrUrl;
+            document.getElementById("qrBox").classList.add("active");
+        });
+    </script>
+</body>
+
+</html>

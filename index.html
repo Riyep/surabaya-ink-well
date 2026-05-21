@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surabaya Ink Well</title>
+    <link rel="icon" type="image/png" href="logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="templatemo-parallax-starter.css">
+
+</head>
+
+<body>
+
+
+    <footer>
+        <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2026</span> Surabaya Ink Well.
+
+            Design: <a rel="nofollow" href="https://www.instagram/ri.yep.com" class="tm-text-highlight">Riyep</a></p>
+    </footer>
+    </div>
+    </div>
+
+    <script>
+
+        function setupFooter() {
+            var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
+
+            var main = $('.tm-main-content');
+
+            if ($(window).height() < pageHeight) {
+                main.addClass('tm-footer-relative');
+            }
+            else {
+                main.removeClass('tm-footer-relative');
+            }
+        }
+        $(function () {
+
+            setupFooter();
+
+            $(window).resize(function () {
+                setupFooter();
+            });
+
+            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+        });
+
+    </script>
+
+    <!-- Navigation -->
+    <nav id="templatemo-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" style="display:flex; align-items:center; gap:10px;">
+                <img src="logo/logo.png" alt="Surabaya Ink Well Logo" style="height:40px; width:auto; max-width:none;">
+                <span style="font-family:'Oswald', sans-serif; font-size:22px; letter-spacing:4px; font-weight:600;">
+                    SURABAYA INK WELL
+                </span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#appointment">APPOINTMENT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="language-switch nav-language-switch">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="id">IND</button>
+    </div>
+
+    <!-- Section 1: Home / Hero -->
+    <section id="home" class="parallax-section">
+        <div class="parallax-bg" data-speed="0.5" style="background-image: url('images/bg01.jpeg')"></div>
+        <div class="parallax-overlay"></div>
+
+        <div class="section-content">
+            <h1 class="section-title hero-title">WELCOME TO OUR STUDIO</h1>
+            <p class="section-subtitle caps">CUSTOM TATTOOS • REAL EXPRESSION • NO LIMITS</p>
+            <a href="#about" class="btn-scroll">EXPLORE</a>
+        </div>
+    </section>
+
+    <section class="funfact-section">
+        <div class="funfact-card">
+            <div class="funfact-label">TATTOO FUNFACT</div>
+
+            <div class="funfact-content">
+                <p class="funfact-count" id="funfactCount">01 / 08</p>
+                <h2 class="funfact-question" id="funfactQuestion">
+                    Why do tattoos stay in the skin?
+                </h2>
+                <p class="funfact-answer" id="funfactAnswer">
+                    Tattoo ink sits in the dermis, the deeper skin layer that does not shed like the surface layer.
+                </p>
+            </div>
+
+            <button class="funfact-next" id="funfactNext" type="button" aria-label="Next tattoo funfact">
+                &#8594;
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Section 2: About -->
+    <section id="about" class="parallax-section">
+        <div class="parallax-bg" data-speed="0.45" style="background-image: url('images/bg02.jpg')"></div>
+        <div class="parallax-overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">ABOUT US</h2>
+            <div class="about-cols">
+                <div class="about-col">
+                    <div class="about-thumb thumb-top-left">
+                        <img src="logo/logo.png" alt="Our Team">
+                    </div>
+                    <p>Surabaya Ink Well is where bold ideas meet skilled hands. Located in the heart of Surabaya since
+                        2022, our studio
+                        is dedicated to creating tattoos that are raw, personal, and unforgettable. Every piece we craft
+                        is designed with precision, passion, and respect for the art of tattooing.</p>
+                    <p>From minimalist symbols to full custom pieces, we turn your vision into ink that lasts a
+                        lifetime. Ready to wear your story? Book your session at Surabaya Ink Well and let our artists
+                        bring your next tattoo to life.</p>
+                </div>
+                <div class="about-col">
+                    <div class="about-thumb-wide">
+                        <img src="images/about2.png" alt="Our Process">
+                    </div>
+                    <p><strong>Bold Ink. Real Stories.</strong></p>
+                    <p>At Surabaya Ink Well, every tattoo starts with an idea and becomes a piece of art. Our artists
+                        combine creativity, precision, and years of experience to craft tattoos that are personal,
+                        powerful, and built to last.</p>
+                    <p>Whether you want a small meaningful symbol or a full custom design, we’re here to bring your
+                        vision to life. Ready to make it permanent? Book your tattoo session at Surabaya Ink Well and
+                        wear
+                        your story with pride.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-banner artist-banner">
+        <h2 class="artist-title">OUR ARTIST</h2>
+        <div class="artist-slider">
+
+            <div class="artist-track">
+
+                <!-- set pertama -->
+                <div class="artist-card"><img src="images/artist1.png"></div>
+                <div class="artist-card"><img src="images/artist2.png"></div>
+                <div class="artist-card"><img src="images/artist3.png"></div>
+                <div class="artist-card"><img src="images/artist4.png"></div>
+                <div class="artist-card"><img src="images/artist5.png"></div>
+                <div class="artist-card"><img src="images/artist6.png"></div>
+                <div class="artist-card"><img src="images/artist7.png"></div>
+                <div class="artist-card"><img src="images/artist8.png"></div>
+
+                <!-- set kedua untuk loop -->
+                <div class="artist-card"><img src="images/artist1.png"></div>
+                <div class="artist-card"><img src="images/artist2.png"></div>
+                <div class="artist-card"><img src="images/artist3.png"></div>
+                <div class="artist-card"><img src="images/artist4.png"></div>
+                <div class="artist-card"><img src="images/artist5.png"></div>
+                <div class="artist-card"><img src="images/artist6.png"></div>
+                <div class="artist-card"><img src="images/artist7.png"></div>
+                <div class="artist-card"><img src="images/artist8.png"></div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Section 3: Gallery -->
+    <section id="gallery" class="parallax-section">
+        <div class="parallax-bg" data-speed="0.55" style="background-image: url('images/03.png')"></div>
+        <div class="parallax-overlay gallery-overlay"></div>
+
+        <div class="section-content service-col">
+            <h2 class="section-title">TATTOO PLACEMENT</h2>
+            <p class="section-subtitle caps">ART DESIGNED FOR EVERY PART OF YOUR BODY</p>
+
+            <div class="services-grid">
+
+                <div class="service-item" data-modal="headModal">
+                    <div class="service-icon">
+                        <img class="head-icon" src="images/head2.png" alt="Head Tattoo">
+                    </div>
+                    <h3>HEAD</h3>
+                    <p class="caps">BOLD AND UNIQUE DESIGNS FOR THE MOST FEARLESS PLACEMENT.</p>
+                </div>
+
+                <div class="service-item" data-modal="chestModal">
+                    <div class="service-icon">
+                        <img src="images/chest2.png" alt="Chest Tattoo">
+                    </div>
+                    <h3>CHEST</h3>
+                    <p class="caps">POWERFUL CENTERPIECE TATTOOS THAT TELL A STORY.</p>
+                </div>
+
+                <div class="service-item" data-modal="backModal">
+                    <div class="service-icon">
+                        <img src="images/back2.png" alt="Back Tattoo">
+                    </div>
+                    <h3>BACK</h3>
+                    <p class="caps">LARGE CANVAS DESIGNS PERFECT FOR DETAILED ARTWORK.</p>
+                </div>
+
+                <div class="service-item" data-modal="armModal">
+                    <div class="service-icon">
+                        <img src="images/arm2.png" alt="Arm Tattoo">
+                    </div>
+                    <h3>ARM</h3>
+                    <p class="caps">SLEEVES AND SYMBOLIC DESIGNS THAT FLOW WITH MOVEMENT.</p>
+                </div>
+
+                <div class="service-item" data-modal="footModal">
+                    <div class="service-icon">
+                        <img src="images/thigh2.png" alt="Foot Tattoo">
+                    </div>
+                    <h3>LEG</h3>
+                    <p class="caps">SUBTLE AND ELEGANT TATTOOS FOR A PERSONAL TOUCH.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="studio-section">
+        <div class="studio-inner">
+
+            <div class="studio-heading">
+                <p class="studio-kicker">WHY CHOOSE US</p>
+                <h2 class="studio-title">INK WITH PURPOSE</h2>
+                <p class="studio-intro">
+                    Every tattoo starts with trust. From the first sketch to the final wipe, we focus on clean work,
+                    strong design, and a comfortable studio experience.
+                </p>
+            </div>
+
+            <div class="studio-grid">
+                <div class="studio-card">
+                    <span class="studio-number">01</span>
+                    <h3>CUSTOM DESIGN</h3>
+                    <p>Your idea is shaped into artwork that fits your body, placement, and personal story.</p>
+                </div>
+
+                <div class="studio-card">
+                    <span class="studio-number">02</span>
+                    <h3>HYGIENIC STUDIO</h3>
+                    <p>We work with clean equipment, careful preparation, and professional tattoo safety standards.</p>
+                </div>
+
+                <div class="studio-card">
+                    <span class="studio-number">03</span>
+                    <h3>EXPERIENCED ARTISTS</h3>
+                    <p>Our artists understand linework, shading, flow, and how tattoos age on real skin.</p>
+                </div>
+
+                <div class="studio-card">
+                    <span class="studio-number">04</span>
+                    <h3>AFTERCARE GUIDANCE</h3>
+                    <p>We guide you through healing so your tattoo stays sharp, clean, and beautiful.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section 4: Appointment -->
+    <section id="appointment" class="parallax-section">
+        <div class="parallax-bg" data-speed="0.5" style="background-image: url('images/parallax-bg-04.png')"></div>
+        <div class="parallax-overlay"></div>
+        <div class="section-content appointment-content">
+            <div class="appointment-copy">
+                <p class="appointment-kicker">BOOK YOUR SESSION</p>
+
+                <h2 class="appointment-title">APPOINTMENT</h2>
+
+                <div class="appointment-divider">
+                    <span></span>
+                    <strong>SURABAYA INK WELL</strong>
+                    <span></span>
+                </div>
+
+                <p class="appointment-lead">Ready to bring your ideas to life?</p>
+                <p class="appointment-text">Schedule your appointment and let's create something timeless.</p>
+
+                <div class="appointment-steps">
+                    <div class="appointment-step">
+                        <div class="step-circle">
+                            <img src="images/appoint1.png" alt="Choose date">
+                        </div>
+                        <p>CHOOSE DATE</p>
+                    </div>
+
+                    <div class="appointment-step">
+                        <div class="step-circle">
+                            <img src="images/appoint2.png" alt="Choose a service">
+                        </div>
+                        <p>CHOOSE A SERVICE</p>
+                    </div>
+
+                    <div class="appointment-step">
+                        <div class="step-circle">
+                            <img src="images/appoint3.png" alt="Your details">
+                        </div>
+                        <p>YOUR DETAILS</p>
+                    </div>
+
+                    <div class="appointment-step">
+                        <div class="step-circle">
+                            <img src="images/appoint4.png" alt="Confirm">
+                        </div>
+                        <p>CONFIRM</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="appointment-page-btn">
+                    BOOK NOW
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location section -->
+    <section class="location-section">
+        <div class="location-inner">
+            <div class="location-info">
+                <p class="location-kicker">FIND OUR STUDIO</p>
+                <h2 class="location-title">LOCATION</h2>
+
+                <p class="location-text">
+                    Visit Surabaya Ink Well and talk directly with our artists about your next tattoo idea.
+                </p>
+
+                <div class="location-line"></div>
+
+                <p class="location-address">
+                    Jl. Kapas Lor Gg. I No.10, Gading, Kec. Tambaksari, Surabaya, Jawa Timur 60134
+                </p>
+            </div>
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps?q=-7.2427628,112.7636392&z=19&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 5: Contact -->
+    <section id="contact" class="parallax-section">
+        <div class="parallax-bg" data-speed="0.5" style="background-image: url('images/contact-bg.png')"></div>
+        <div class="parallax-overlay overlay-medium"></div>
+
+        <div class="section-content contact-content">
+            <div class="contact-heading">
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <p class="section-subtitle caps">DISCUSS YOUR NEXT TATTOO WITH US</p>
+            </div>
+
+            <div class="contact-card">
+                <div id="contactForm" class="contact-form">
+                    <input type="text" id="contactName" placeholder="Your name" required>
+                    <input type="tel" id="contactNumber" placeholder="Your WhatsApp number" required>
+                    <textarea id="contactDetail" placeholder="Tell us your tattoo idea" rows="5" required></textarea>
+
+                    <a id="whatsappLink" class="whatsapp-submit" href="https://wa.me/6289677602300" target="_blank">
+                        <img src="images/logowa.png" alt="WhatsApp">
+                        <span>SEND TO WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="templatemo-parallax-script.js"></script>
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const img = document.getElementById("hero-dashboard");
+            const scrollPos = window.scrollY;
+
+            img.style.transform = "translateY(" + scrollPos * 0.15 + "px)";
+        });
+    </script>
+
+    <div class="modal" id="headModal">
+        <div class="modal-content photo-popup">
+            <span class="modal-close">&times;</span>
+
+            <div class="photo-stage">
+                <div class="photo-blur"></div>
+                <img class="popup-photo active" src="images/head-photo1.jpg" alt="Head tattoo photo">
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev" type="button">‹</button>
+                <span class="photo-count">1 / 3</span>
+                <button class="photo-next" type="button">›</button>
+            </div>
+
+            <div class="photo-list">
+                <img src="images/xhead.png" alt="">
+                <img src="images/xhead1.png" alt="">
+                <img src="images/xhead2.png" alt="">
+                <img src="images/xhead6.png" alt="">
+                <img src="images/xhead3.png" alt="">
+                <img src="images/xhead4.png" alt="">
+                <img src="images/xhead5.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="chestModal">
+        <div class="modal-content photo-popup">
+            <span class="modal-close">&times;</span>
+
+            <div class="photo-stage">
+                <div class="photo-blur"></div>
+                <img class="popup-photo active" src="images/head-photo1.jpg" alt="Chest tattoo photo">
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev" type="button">‹</button>
+                <span class="photo-count">1 / 3</span>
+                <button class="photo-next" type="button">›</button>
+            </div>
+
+            <div class="photo-list">
+                <img src="images/xchest.png" alt="">
+                <img src="images/xchest1.png" alt="">
+                <img src="images/xchest2.png" alt="">
+                <img src="images/xchest3.png" alt="">
+                <img src="images/xchest4.png" alt="">
+                <img src="images/xchest5.png" alt="">
+                <img src="images/xchest6.png" alt="">
+                <img src="images/xchest7.png" alt="">
+                <img src="images/xchest8.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="armModal">
+        <div class="modal-content photo-popup">
+            <span class="modal-close">&times;</span>
+
+            <div class="photo-stage">
+                <div class="photo-blur"></div>
+                <img class="popup-photo active" src="images/head-photo1.jpg" alt="Arm tattoo photo">
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev" type="button">‹</button>
+                <span class="photo-count">1 / 3</span>
+                <button class="photo-next" type="button">›</button>
+            </div>
+
+            <div class="photo-list">
+                <img src="images/xarm.png" alt="">
+                <img src="images/xarm1.png" alt="">
+                <img src="images/xarm2.png" alt="">
+                <img src="images/xarm3.png" alt="">
+                <img src="images/xarm4.png" alt="">
+                <img src="images/xarm5.png" alt="">
+                <img src="images/xarm6.png" alt="">
+                <img src="images/xarm7.png" alt="">
+                <img src="images/xarm8.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="backModal">
+        <div class="modal-content photo-popup">
+            <span class="modal-close">&times;</span>
+
+            <div class="photo-stage">
+                <div class="photo-blur"></div>
+                <img class="popup-photo active" src="images/head-photo1.jpg" alt="Back tattoo photo">
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev" type="button">‹</button>
+                <span class="photo-count">1 / 3</span>
+                <button class="photo-next" type="button">›</button>
+            </div>
+
+            <div class="photo-list">
+                <img src="images/xback.png" alt="">
+                <img src="images/xback1.png" alt="">
+                <img src="images/xback2.png" alt="">
+                <img src="images/xback3.png" alt="">
+                <img src="images/xback4.png" alt="">
+                <img src="images/xback5.png" alt="">
+                <img src="images/xback6.png" alt="">
+                <img src="images/xback8.png" alt="">
+                <img src="images/xback7.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="footModal">
+        <div class="modal-content photo-popup">
+            <span class="modal-close">&times;</span>
+
+            <div class="photo-stage">
+                <div class="photo-blur"></div>
+                <img class="popup-photo active" src="images/head-photo1.jpg" alt="Leg tattoo photo">
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev" type="button">‹</button>
+                <span class="photo-count">1 / 3</span>
+                <button class="photo-next" type="button">›</button>
+            </div>
+
+            <div class="photo-list">
+                <img src="images/xleg.png" alt="">
+                <img src="images/xleg1.png" alt="">
+                <img src="images/xleg2.png" alt="">
+                <img src="images/xleg3.png" alt="">
+                <img src="images/xleg4.png" alt="">
+                <img src="images/xleg5.png" alt="">
+                <img src="images/xleg6.png" alt="">
+                <img src="images/xleg7.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll(".service-item");
+        const modals = document.querySelectorAll(".modal");
+        const closes = document.querySelectorAll(".modal-close");
+
+        function setupGallery(modal) {
+            const photos = [...modal.querySelectorAll(".photo-list img")].map(img => img.src);
+            const mainPhoto = modal.querySelector(".popup-photo");
+            const photoStage = modal.querySelector(".photo-stage");
+            const count = modal.querySelector(".photo-count");
+            const prev = modal.querySelector(".photo-prev");
+            const next = modal.querySelector(".photo-next");
+
+            if (!photos.length || !mainPhoto) return;
+
+            let index = 0;
+
+            function showPhoto(newIndex) {
+                index = (newIndex + photos.length) % photos.length;
+
+                mainPhoto.classList.remove("active");
+
+                setTimeout(() => {
+                    mainPhoto.src = photos[index];
+                    photoStage.style.setProperty("--current-photo", `url("${photos[index]}")`);
+                    count.textContent = `${index + 1} / ${photos.length}`;
+                    mainPhoto.classList.add("active");
+                }, 180);
+            }
+
+            prev.addEventListener("click", (e) => {
+                e.stopPropagation();
+                showPhoto(index - 1);
+            });
+
+            next.addEventListener("click", (e) => {
+                e.stopPropagation();
+                showPhoto(index + 1);
+            });
+
+            showPhoto(0);
+        }
+
+        function openModal(modal, x, y) {
+            modal.classList.remove("closing");
+            modal.style.setProperty("--popup-x", x + "px");
+            modal.style.setProperty("--popup-y", y + "px");
+            modal.classList.add("active");
+        }
+
+        function closeModal(modal) {
+            modal.classList.add("closing");
+            modal.classList.remove("active");
+
+            setTimeout(() => {
+                modal.classList.remove("closing");
+            }, 350);
+        }
+
+        modals.forEach(setupGallery);
+
+        items.forEach(item => {
+            item.addEventListener("click", (e) => {
+                const modal = document.getElementById(item.dataset.modal);
+                openModal(modal, e.clientX, e.clientY);
+            });
+        });
+
+        closes.forEach(close => {
+            close.addEventListener("click", () => {
+                closeModal(close.closest(".modal"));
+            });
+        });
+
+        modals.forEach(modal => {
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+
+        document.addEventListener("keydown", (e) => {
+            const activeModal = document.querySelector(".modal.active");
+
+            if (!activeModal) return;
+
+            if (e.key === "Escape") {
+                closeModal(activeModal);
+            }
+
+            if (e.key === "ArrowLeft") {
+                activeModal.querySelector(".photo-prev")?.click();
+            }
+
+            if (e.key === "ArrowRight") {
+                activeModal.querySelector(".photo-next")?.click();
+            }
+        });
+
+
+        const tattooFunfacts = [
+            {
+                question: "Why do tattoos stay in the skin?",
+                answer: "Tattoo ink sits in the dermis, the deeper skin layer that does not shed like the surface layer."
+            },
+            {
+                question: "Can tattoos fade over time?",
+                answer: "Yes. Sun exposure, skin aging, placement, and aftercare all affect how strongly a tattoo holds its color."
+            },
+            {
+                question: "Why does black ink usually last longest?",
+                answer: "Black pigment is dense and stable, so it often stays clearer over time compared with lighter colors."
+            },
+            {
+                question: "Does placement affect tattoo pain?",
+                answer: "Yes. Areas close to bone or with thinner skin, like ribs, feet, hands, and head, usually feel sharper."
+            },
+            {
+                question: "Why is aftercare important?",
+                answer: "Fresh tattoos are healing skin. Proper cleaning and moisturizing help protect the artwork while the skin repairs."
+            },
+            {
+                question: "Can every design become a tiny tattoo?",
+                answer: "Not always. Very small tattoos need simplified detail so the lines stay readable as the tattoo ages."
+            },
+            {
+                question: "Why do artists shave the area first?",
+                answer: "Removing hair helps the stencil stick cleanly and lets the needle move across the skin more smoothly."
+            },
+            {
+                question: "Do tattoos need sunscreen?",
+                answer: "Yes. Once healed, sunscreen helps protect tattoo pigment from UV damage and keeps the design looking stronger."
+            }
+        ];
+
+        let funfactIndex = 0;
+
+        const funfactContent = document.querySelector(".funfact-content");
+        const funfactCount = document.getElementById("funfactCount");
+        const funfactQuestion = document.getElementById("funfactQuestion");
+        const funfactAnswer = document.getElementById("funfactAnswer");
+        const funfactNext = document.getElementById("funfactNext");
+
+        function showFunfact(index) {
+            const item = tattooFunfacts[index];
+
+            funfactContent.classList.add("changing");
+
+            setTimeout(() => {
+                funfactCount.textContent = String(index + 1).padStart(2, "0") + " / 08";
+                funfactQuestion.textContent = item.question;
+                funfactAnswer.textContent = item.answer;
+
+                funfactContent.classList.remove("changing");
+            }, 250);
+        }
+
+        funfactNext.addEventListener("click", () => {
+            funfactIndex = (funfactIndex + 1) % tattooFunfacts.length;
+            showFunfact(funfactIndex);
+        });
+
+        const contactName = document.getElementById("contactName");
+        const contactNumber = document.getElementById("contactNumber");
+        const contactDetail = document.getElementById("contactDetail");
+        const whatsappLink = document.getElementById("whatsappLink");
+
+        function updateWhatsappLink() {
+            const message =
+                "Hello, I want to discuss a tattoo.\n\n" +
+                "Name: " + contactName.value + "\n" +
+                "WhatsApp Number: " + contactNumber.value + "\n" +
+                "Tattoo Detail: " + contactDetail.value;
+
+            whatsappLink.href =
+                "https://wa.me/6289677602300?text=" + encodeURIComponent(message);
+        }
+
+        contactName.addEventListener("input", updateWhatsappLink);
+        contactNumber.addEventListener("input", updateWhatsappLink);
+        contactDetail.addEventListener("input", updateWhatsappLink);
+
+        updateWhatsappLink();
+    </script>
+
+    <!-- Footer -->
+    <footer id="templatemo-footer">
+        <p>Copyright &copy; 2026 Surabaya Ink Well. Designed by <a href="https://instagram.com/ri.yep" rel="nofollow"
+                target="_blank">Riyep</a></p>
+    </footer>
+
+
+</body>
+
+</html>
