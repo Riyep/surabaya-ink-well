@@ -2,23 +2,6 @@
 'use strict';
 
 /* ================================
-LOADING SCREEN
-================================ */
-
-window.addEventListener("load", function () {
-    const loader = document.createElement("div");
-    loader.id = "page-loader";
-    loader.innerHTML = "<div class='loader'></div>";
-    document.body.appendChild(loader);
-
-    setTimeout(() => {
-        loader.classList.add("fade-out");
-        setTimeout(()=> loader.remove(),600);
-    },600);
-});
-
-
-/* ================================
 ELEMENTS
 ================================ */
 
@@ -83,7 +66,7 @@ function onScroll() {
     }
 }
 
-window.addEventListener("scroll", onScroll);
+window.addEventListener("scroll", onScroll, { passive: true });
 
 
 /* ================================
@@ -103,7 +86,7 @@ function handleNavScroll() {
     }
 }
 
-window.addEventListener("scroll", handleNavScroll);
+window.addEventListener("scroll", handleNavScroll, { passive: true });
 
 
 /* ================================
@@ -139,7 +122,7 @@ function updateActiveLink() {
     });
 }
 
-window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("scroll", updateActiveLink, { passive: true });
 
 
 /* ================================
