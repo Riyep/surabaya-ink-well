@@ -49,7 +49,7 @@
             min-height: 100vh;
             font-family: var(--font-body);
             color: var(--white);
-            background: #080808 url("images/payment-bg.png") center / cover fixed no-repeat;
+            background: #080808 url("images/payment-bg.webp") center / cover fixed no-repeat;
         }
 
         .payment-page {
@@ -226,13 +226,38 @@
             opacity: .8;
         }
 
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         @media (max-width: 620px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            .payment-page {
+                padding: 75px 16px 40px;
+            }
+
             .payment-card {
-                padding: 30px 22px;
+                padding: 28px 18px;
+            }
+
+            .payment-title {
+                font-size: clamp(28px, 6.5vw, 48px);
+                letter-spacing: 3px;
+                word-break: break-word;
             }
 
             .payment-summary {
                 grid-template-columns: 1fr;
+            }
+
+            .pay-btn {
+                width: 100%;
+                letter-spacing: 2px;
             }
         }
     </style>

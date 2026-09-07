@@ -43,6 +43,14 @@ let ticking = false;
 
 function updateParallax() {
 
+    if (window.innerWidth <= 768) {
+        parallaxBgs.forEach(bg => {
+            bg.style.transform = '';
+        });
+        ticking = false;
+        return;
+    }
+
     const scrollTop = window.pageYOffset;
 
     parallaxBgs.forEach(bg => {
@@ -77,11 +85,11 @@ function handleNavScroll() {
 
     if (window.scrollY > 50) {
 
-        nav.classList.add("nav-blur");
+        nav.classList.add("scrolled", "nav-blur");
 
     } else {
 
-        nav.classList.remove("nav-blur");
+        nav.classList.remove("scrolled", "nav-blur");
 
     }
 }
@@ -155,64 +163,22 @@ revealElements.forEach(el=>{
 MOBILE MENU
 ================================ */
 
-navToggle.addEventListener("click", ()=>{
+if (navToggle && navLinks) {
+    navToggle.addEventListener("click", ()=>{
 
-    navToggle.classList.toggle("active");
-    navLinks.classList.toggle("open");
-
-});
-
-navItems.forEach(link=>{
-    link.addEventListener("click", ()=>{
-
-        navToggle.classList.remove("active");
-        navLinks.classList.remove("open");
+        navToggle.classList.toggle("active");
+        navLinks.classList.toggle("open");
 
     });
-});
 
+    navItems.forEach(link=>{
+        link.addEventListener("click", ()=>{
 
-/* ================================
-CONTACT FORM
-================================ */
+            navToggle.classList.remove("active");
+            navLinks.classList.remove("open");
 
-const contactForm = document.getElementById("contactForm");
-
-if(contactForm){
-
-contactForm.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    alert("Thank you for your message!");
-
-    contactForm.reset();
-
-});
-
+        });
+    });
 }
-
-
-/* ================================
-GALLERY HOVER EFFECT
-================================ */
-
-const galleryItems = document.querySelectorAll(".gallery-item");
-
-galleryItems.forEach(item => {
-
-    item.addEventListener("mouseenter", ()=>{
-
-        item.classList.add("hover");
-
-    });
-
-    item.addEventListener("mouseleave", ()=>{
-
-        item.classList.remove("hover");
-
-    });
-
-});
 
 })();
